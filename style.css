@@ -62,10 +62,14 @@ table {
 
 body,
 html {
+	height:100%;
 	font-size: 100%
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+	min-height: 100vh;
 	background: #fff;
 	padding: 0;
 	margin: 0;
@@ -153,11 +157,13 @@ p {
 	font-family: inherit;
 	font-weight: 400;
 	font-size: 1em;
-	line-height: 1.6;
+	line-height: 1;
 	margin-bottom: 1.25em;
 	text-rendering: optimizeLegibility
 }
-
+div .paragraph > p {
+	line-height: 1.6;
+}
 h1,
 h2,
 h3,
@@ -165,9 +171,7 @@ h4,
 h5,
 h6 {
 	font-family: "Open Sans", "DejaVu Sans", sans-serif;
-	font-weight: 300;
 	font-style: normal;
-	color: #ba3925;
 	text-rendering: optimizeLegibility;
 	margin-top: 1em;
 	margin-bottom: .5em;
@@ -206,6 +210,7 @@ ul {
 	line-height: 1.6;
 	margin-bottom: 1.25em;
 	list-style-position: outside;
+	list-style-type: square;
 	font-family: inherit
 }
 
@@ -309,7 +314,6 @@ em em {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 0;
 	margin-bottom: 0;
 	max-width: 62.5em;
 	position: relative;
@@ -350,9 +354,10 @@ em em {
 }
 
 #footer {
+	margin-top:auto;
 	max-width: 100%;
 	background-color: rgba(0, 0, 0, .8);
-	padding: 1.25em
+	padding: 1.25em;
 }
 
 #footer-text {
@@ -436,6 +441,13 @@ p,
 span.alt,
 td.content {
 	font-size: 106%
+}
+
+#toctitle  {
+	font-family: 'Garamond', serif;
+	text-indent:1em;
+	font-size: 20px;
+	font-weight: 420;
 }
 
 p {
@@ -742,7 +754,6 @@ hr::before {
 }
 
 #storycontent {
-	text-indent: 2em;
 	text-align: justify;
 	text-justify: inter-word
 }
@@ -798,4 +809,8 @@ hr::before {
 #inverter, #inverter a, #inverter a:hover {
 	background: #000;
 	color: #fff;
+}
+
+#naslov {
+	color: #fe5185;
 }
