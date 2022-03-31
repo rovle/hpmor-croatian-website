@@ -114,7 +114,7 @@ textarea {
 }
 
 .ulist>.title {
-	line-height: 1.45;
+	line-height: 1.1;
 	color: #7a2518;
 	font-weight: 400;
 	margin-top: 0;
@@ -207,8 +207,8 @@ i {
 
 ul {
 	font-size: 1em;
-	line-height: 1.6;
-	margin-bottom: 1.25em;
+	line-height: 1.2;
+	margin-bottom: 1em;
 	list-style-position: outside;
 	list-style-type: square;
 	font-family: inherit
@@ -444,10 +444,8 @@ td.content {
 }
 
 #toctitle  {
-	font-family: 'Garamond', serif;
 	text-indent:1em;
-	font-size: 20px;
-	font-weight: 420;
+	font-size: 21px;
 }
 
 p {
@@ -574,7 +572,7 @@ p {
 	font-size: 13px;
 	font-weight: 400;
 	height: auto;
-	line-height: 1.4em;
+	line-height: 1em;
 	padding: 10px 10px;
 	width: 168px
 }
@@ -614,7 +612,7 @@ p {
 	color: #ca9300;
 	text-decoration: none;
 	border-bottom: 2px dotted #e3cc8e;
-	line-height: 1.7em
+	line-height: 1.2em
 }
 
 #storycontent a:hover {
