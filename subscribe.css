@@ -1,0 +1,47 @@
+#subscribeform {
+	 margin:auto;
+	 width: max-content;
+	 min-height: 40px;
+	 font-size: 10pt;
+	 border: 1.8px solid black;
+	 border-radius: 50px;
+	 overflow: hidden;
+}
+#subscribeinput {
+	 font-size: inherit;
+	 width: 400px;
+	 padding: 10px;
+	 margin-right: -1px;
+	 transition: padding 0.2s;
+	 border: 0;
+}
+#subscribeinput::selection {
+	 background: #fdd17c;
+}
+#subscribebutton {
+	 font-size: inherit;
+	 float: right;
+	 padding: 10px;
+	 margin-left: -1px;
+	 background: #fcc04a;
+	 transition: padding 0.2s;
+	 border: 0;
+}
+#subscribebutton:hover {
+	 cursor: pointer;
+	 padding: 10px 16px;
+}
+#subscribebutton:hover ~ input {
+	 padding: 10px 0 10px 10px;
+}
+
+#subscribebutton:after{
+   content: 'Obavijesti me!';
+   display: block;
+}
+
+#subscribebutton:focus:after,
+#subscribebutton:active:after{
+   content: 'Poslano!';
+   display: block;
+}
