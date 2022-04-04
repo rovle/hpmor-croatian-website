@@ -489,15 +489,13 @@ $( function() {
     }
     var sentText = form.serialize();
     $.post('./report.php', sentText).done(function() {
-        dialogMsg.dialog("option", "title", "Р”СЏРєСѓС”РјРѕ!");
-        dialogMsg.text("Р”СѓР¶Рµ РґСЏРєСѓС”РјРѕ Р·Р° РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ!");
+        dialogMsg.dialog("option", "title", "Slanje uspjelo!");
+        dialogMsg.text("Vaš feedback je zabilježen; hvala Vam!");
         window.setTimeout(function(){dialogMsg.dialog("close");}, 2000);
         dialogMsg.dialog("open");
     }).fail(function() {
-        dialogMsg.dialog("option", "title", "РџРѕРјРёР»РєР° :(");
-        dialogMsg.html("РќР° Р¶Р°Р»СЊ, РІРёРЅРёРєР»Р° РїРѕРјРёР»РєР° РЅР° СЃРµСЂРІРµСЂС–. РЇРєС‰Рѕ С” РјРѕР¶Р»РёРІС–СЃС‚СЊ, РЅР°РґС–С€Р»С–С‚СЊ РЅР° <pre>0_0@РіРїС–РјСЂ.СѓРєСЂ</pre> С‚Р°РєРµ РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ:"
-                       + "<br><textarea>" + sentText + "</textarea><br/>РўСѓС‚ РјС–СЃС‚РёС‚СЊСЃСЏ РІР°С€Рµ РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ.<br/>"
-                       + "Р’РёР±Р°С‡С‚Рµ Р·Р° РЅРµР·СЂСѓС‡РЅРѕСЃС‚С–, РґСЏРєСѓС”РјРѕ Р·Р° Р±Р°Р¶Р°РЅРЅСЏ РґРѕРїРѕРјРѕРіС‚Рё!");
+        dialogMsg.dialog("option", "title", "Slanje neuspjelo :(");
+        dialogMsg.html("Iz nekog razloga slanje nije uspjelo. Ako imate dovoljno elana da prijavite i pogrešku na sustavu prijavljivanje pogrešaka, javite se na lovre.pesut@gmail.com pa da vidimo u čemu je riječ.");
         dialogMsg.dialog("open");
     });
     dialog.dialog( "close" );
@@ -508,7 +506,7 @@ $( function() {
     autoOpen: false,
     modal: true,
     buttons: {
-      "Р“Р°СЂР°Р·Рґ": function() {
+      "Odustani": function() {
         dialogMsg.dialog( "close" );
       },
     },
@@ -517,10 +515,10 @@ $( function() {
     autoOpen: false,
     modal: true,
     buttons: {
-      "РЎРєР°СЃСѓРІР°С‚Рё": function() {
+      "Odustani": function() {
         dialog.dialog( "close" );
       },
-      "РџРѕРІС–РґРѕРјРёС‚Рё": reportError,
+      "Prijavi!": reportError,
     },
     minWidth: 500,
     close: function() {
