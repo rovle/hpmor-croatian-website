@@ -422,7 +422,7 @@ function invertColors() {
 
 $(document).ready(function() {
 
- $('body').prepend('<div id="resizer"> <div id="smaller"><a href="#" title="Test2">A<span></span></a></div> <div id="original"><a href="#" title="Test3">a<span></span></a></div> <div id="bigger"><a href="#" title="Test1">A<span></span></a></div> <div id="fullwidth"><a href="#" title="Test4">&laquo;&raquo;<span></span></a></div> <div id="readwidth"><a href="#" title="Test5">&raquo;&laquo;<span></span></a></div> <div id="inverter"><a href="#" title="Test6">A<span></span></a></div> </div>');
+ $('body').prepend('<div id="resizer"> <div id="smaller"><a href="#" title="Smanji">A<span></span></a></div> <div id="original"><a href="#" title="Normalna veličina">A<span></span></a></div> <div id="bigger"><a href="#" title="Povećaj">A<span></span></a></div> <div id="fullwidth"><a href="#" title="Poravnaj lijevo">&laquo;&raquo;<span></span></a></div> <div id="readwidth"><a href="#" title="Centriraj">&raquo;&laquo;<span></span></a></div> <div id="inverter"><a href="#" title="Noćni mod">A<span></span></a></div> </div>');
 
  if($.cookie('TEXT_INVERT') == 1) {
   invertColors();

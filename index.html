@@ -89,8 +89,11 @@
 </div>
 </div>
 </div>
-	<form id="subscribeform" class="center"> 
-	<button type="button" id="subscribebutton"></button>
+	<form id="subscribeform" class="center"
+        action="https://formspree.io/f/mnqwbkzd"
+        method="POST"
+    > 
+	<button type="button" value="send" id="subscribebutton"></button>
 	<input placeholder="email@primjer.com" id="subscribeinput"></input>
 </form>
 
@@ -109,7 +112,10 @@
 <div style="display:none" id="dialog-form" title="Prijavite pogrešku">
   <p class="validateTips">Sva polja su opcionalna.</p>
 
-  <form>
+  <form
+        action="https://formspree.io/f/mwkyndqp"
+        method="POST"
+        >
       <input type="hidden" name="fulltext" id="fulltext" value="">
       <input type="hidden" name="translation" id="translation" value="">
       <input type="hidden" name="page" id="page" value="index">
@@ -129,10 +135,6 @@
       <tr>
         <td><label for="name">Ime:<label></td>
         <td><input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all"></td>
-      </tr>
-      <tr>
-        <td><label for="remember">Zapamti me:</label></td>
-        <td><input type="checkbox" name="remember" id="remember" value="1" class="ui-widget-content"></td>
       </tr>
       </table>
 
