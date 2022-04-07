@@ -97,12 +97,11 @@
 	<input placeholder="vas@email.com" id="subscribeinput" name="email" required></input>
 </form>
 
-</div>
-</div>
 
 <div id="nav-bottom">
 <div id="help-with-errors">Primijetili ste pogrešku? Označite je i kliknite na "Pogreška?" -- hvala Vam! :) (Ova funckionalnost je dostupna samo desktop verziji stranice.)</div>
-
+</div>
+</div>
 </div>
 </div>
 
@@ -112,7 +111,8 @@
 <div style="display:none" id="dialog-form" title="Prijavite pogrešku">
   <p class="validateTips">Sva polja su opcionalna.</p>
 
-  <form
+  <form name="pogreska"
+      id="pogreskaform"
         action="https://formspree.io/f/mwkyndqp"
         method="POST"
         >

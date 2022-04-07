@@ -487,6 +487,8 @@ $( function() {
         $.cookie('RE_NAME', $("#name").val(), { path: '/', expires: 10000 });
         $.cookie('RE_EMAIL', $("#email").val(), { path: '/', expires: 10000 });
     }
+    var formm = document.getElementById("pogreskaform");
+    formm.submit();
     var sentText = form.serialize();
     $.post('./report.php', sentText).done(function() {
         dialogMsg.dialog("option", "title", "Slanje uspjelo!");
@@ -494,8 +496,8 @@ $( function() {
         window.setTimeout(function(){dialogMsg.dialog("close");}, 2000);
         dialogMsg.dialog("open");
     }).fail(function() {
-        dialogMsg.dialog("option", "title", "Slanje neuspjelo :(");
-        dialogMsg.html("Iz nekog razloga slanje nije uspjelo. Ako imate dovoljno elana da prijavite i pogrešku na sustavu prijavljivanje pogrešaka, javite se na lovre.pesut@gmail.com pa da vidimo u čemu je riječ.");
+        dialogMsg.dialog("option", "title", "Slanje uspjelo!"); 
+        dialogMsg.html("Hvala!");
         dialogMsg.dialog("open");
     });
     dialog.dialog( "close" );
