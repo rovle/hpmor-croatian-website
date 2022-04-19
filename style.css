@@ -524,7 +524,7 @@ p {
 	clear: both;
 	display: block;
 	float: left;
-	margin: 0 auto 6px;
+	margin: 0 auto 3px; 
 	width: 100%
 }
 
@@ -650,7 +650,7 @@ p {
 
 #nav-bottom {
 	margin-top: auto;
-    margin-bottom: -1px;
+    margin-bottom: 5px;
 	padding-top: 80px;
 	background: url(https://гпімр.укр/fleur.svg) no-repeat center top;
 	background-size: 55px 57px
