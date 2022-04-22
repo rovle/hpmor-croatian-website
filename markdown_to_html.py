@@ -89,6 +89,7 @@ for ix, chapter in enumerate(chapters_to_publish):
     filedata = filedata.replace('OVDJE_IDU_PARAGRAFI', new_chapter_text)
     filedata = filedata.replace('VRIJEME', vrijeme)
     filedata = filedata.replace(r'\...', '...')
+    filedata = filedata.replace(r'\"', '"')
 
     print(new_chapter_text)
 
