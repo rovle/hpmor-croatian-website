@@ -3,7 +3,9 @@
 import datetime 
 chapters_to_publish = [
         '1 - Dan vrlo niske vjerojatnosti',
-        '2 - Sve u što vjerujem je pogrešno'
+        '2 - Sve u što vjerujem je pogrešno',
+        '3 - Uspoređivanje stvarnosti s njezinim alternativama',
+        '4 - Hipoteza efikasnog tržišta'
         ]
 
 
@@ -31,9 +33,9 @@ def get_dropdown_menu_entry(chapter, selected=False):
     number, name = chapter.split('-')
     chapter_name = f'Poglavlje {number.strip()}. {name.strip()}'
     if selected:
-        open_tag = f'<option value="/chapters/{number.strip()}" selected>'
+        open_tag = f'<option value="/chapters/{number.strip()}.html" selected>'
     else:
-        open_tag = f'<option value="/chapters/{number.strip()}">'
+        open_tag = f'<option value="/chapters/{number.strip()}.html">'
     entry = open_tag + chapter_name + '</option>'
     return entry
 
@@ -55,11 +57,11 @@ for ix, chapter in enumerate(chapters_to_publish):
             navigation += get_dropdown_menu_entry(chapter_)
     navigation += '</select></div>'
     if chapter != chapters_to_publish[0]:
-        back_button = f'<div class="nav-prev"><a href="/chapters/{ix}">' + \
+        back_button = f'<div class="nav-prev"><a href="/chapters/{ix}.html">' + \
                             '&laquo; Prethodno</a></div>'
         navigation = back_button + navigation 
     if chapter != chapters_to_publish[-1]:
-        forward_button = f'<div class="nav-next"><a href="/chapters/{ix+2}">' + \
+        forward_button = f'<div class="nav-next"><a href="/chapters/{ix+2}.html">' + \
                             'Sljedeće &raquo;</a></div>'
         navigation = navigation + forward_button
    
@@ -73,13 +75,15 @@ for ix, chapter in enumerate(chapters_to_publish):
         for line in f.readlines():
             if len(line) == 1:
                 continue
+            if line[2:4] == 'hr':
+                new_chapter_text += '<hr>'
+                continue
             pre = '<div class="paragraph"><p>'
             post = '</p></div>'
             new_chapter_text += pre + format_italics(line) + post
 
     vrijeme = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     vrijeme = f'Zadnje ažurirano: {vrijeme}.'
-    print(vrijeme)
 
     with open('chapter_template.html', 'r') as file:
         filedata = file.read()
@@ -91,7 +95,6 @@ for ix, chapter in enumerate(chapters_to_publish):
     filedata = filedata.replace(r'\...', '...')
     filedata = filedata.replace(r'\"', '"')
 
-    print(new_chapter_text)
 
     with open(f'chapters/{ix+1}.html', 'w') as file:
         file.write(filedata)
