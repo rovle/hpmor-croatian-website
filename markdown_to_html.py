@@ -5,7 +5,9 @@ chapters_to_publish = [
         '1 - Dan vrlo niske vjerojatnosti',
         '2 - Sve u što vjerujem je pogrešno',
         '3 - Uspoređivanje stvarnosti s njezinim alternativama',
-        '4 - Hipoteza efikasnog tržišta'
+        '4 - Hipoteza efikasnog tržišta',
+        '5 - Osnovna atribucijska pogreška',
+        '6 - Zabluda o planiranju',
         ]
 
 
