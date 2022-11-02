@@ -524,7 +524,7 @@ p {
 	clear: both;
 	display: block;
 	float: left;
-	margin: 0 auto 3px; 
+	margin: 0 auto 3px;
 	width: 100%
 }
 
@@ -674,6 +674,8 @@ input {
 }
 
 #help-with-errors {
+    padding-top: 1em;
+    padding-bottom: 1em;
 	text-align: center;
 	font-size: 87%
 }
