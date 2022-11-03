@@ -40,9 +40,9 @@ def get_dropdown_menu_entry(chapter, selected=False):
     number, name = chapter.split('-')
     chapter_name = f'Poglavlje {number.strip()}. {name.strip()}'
     if selected:
-        open_tag = f'<option value="/chapters/{number.strip()}.html" selected>'
+        open_tag = f'<option value="/chapters/{number.strip()}" selected>'
     else:
-        open_tag = f'<option value="/chapters/{number.strip()}.html">'
+        open_tag = f'<option value="/chapters/{number.strip()}">'
     entry = open_tag + chapter_name + '</option>'
     return entry
 
